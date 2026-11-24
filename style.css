@@ -1,0 +1,1002 @@
+/* =====================================
+   RCB THEME - COLOR VARIABLES
+===================================== */
+
+:root {
+    --primary-color: #D71920;
+    --secondary-color: #8B0000;
+    --accent-color: #D4AF37;
+    --background-color: #101010;
+    --card-color: #1C1C1C;
+    --text-color: #FFFFFF;
+    --border-color: #383838;
+}
+
+
+/* =====================================
+   GENERAL STYLING
+===================================== */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin: 30px 0;
+    padding: 25px;
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+section h2 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+
+/* =====================================
+   HEADER - FLEXBOX
+===================================== */
+
+header {
+    background-color: #080808;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 15px;
+
+    padding: 15px 30px;
+
+    border-bottom: 3px solid var(--primary-color);
+}
+
+
+/* LOGO CONTAINER */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.rcb-logo {
+    width: 90px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid #D4AF37;
+}
+
+.logo-container h1 {
+    color: #D71920;
+    font-size: 28px;
+    margin: 0;
+}
+
+
+/* =====================================
+   NAVIGATION - FLEXBOX
+===================================== */
+
+nav {
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+
+/* =====================================
+   HOME SECTION
+===================================== */
+
+#home {
+    background: linear-gradient(
+        135deg,
+        #8B0000,
+        #D71920,
+        #260000
+    );
+
+    color: white;
+    text-align: center;
+
+    padding: 75px 20px;
+    margin-top: 30px;
+
+    border-radius: 15px;
+    border: 1px solid var(--accent-color);
+}
+
+#home h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+
+    border: 1px solid var(--accent-color);
+
+    padding: 12px 22px;
+    margin: 5px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    color: #111;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   ABOUT SECTION
+===================================== */
+
+#about ul {
+    padding-left: 25px;
+}
+
+#about li {
+    margin: 10px 0;
+    color: #eeeeee;
+}
+
+
+/* =====================================
+   RESPONSIVE TABLES
+===================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px;
+    border: 1px solid #555;
+    white-space: nowrap;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    white-space: nowrap;
+}
+
+tr:hover {
+    background-color: #303030;
+}
+
+#matches table {
+    min-width: 800px;
+}
+
+#my-bookings table {
+    min-width: 700px;
+}
+
+
+/* =====================================
+   BOOKING SECTION - CSS GRID
+===================================== */
+
+.booking-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.booking-form,
+.booking-summary {
+    min-width: 0;
+    padding: 25px;
+
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+
+    background-color: #222222;
+}
+
+.booking-form h3,
+.booking-summary h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+
+/* =====================================
+   FORM STYLING
+===================================== */
+
+form label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+#team {
+    width: 100%;
+    padding: 12px;
+
+    background-color: #111;
+    color: white;
+
+    border: 1px solid #555;
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus,
+#team:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+form button {
+    margin-top: 20px;
+}
+
+
+/* =====================================
+   BOOKING SUMMARY
+===================================== */
+
+.booking-summary {
+    border-left: 4px solid var(--accent-color);
+}
+
+.booking-summary p {
+    padding: 10px;
+    margin: 5px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+/* =====================================
+   GUIDELINES - CSS GRID
+===================================== */
+
+.guidelines-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.guideline-card {
+    min-width: 0;
+    padding: 20px;
+
+    border: 1px solid var(--border-color);
+    border-top: 3px solid var(--primary-color);
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    background-color: #222222;
+}
+
+.guideline-card h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+}
+
+
+/* =====================================
+   ADDITIONAL NOTE
+===================================== */
+
+.additional-note {
+    padding: 15px;
+    color: #cccccc;
+    text-align: center;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background-color: #080808;
+    color: white;
+
+    text-align: center;
+
+    padding: 22px;
+    margin-top: 30px;
+
+    border-top: 3px solid var(--primary-color);
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li {
+        margin: 8px 12px;
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+
+    .guidelines-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #home h2 {
+        font-size: 28px;
+    }
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .rcb-logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo-container h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    #home {
+        padding: 45px 15px;
+    }
+
+    #home h2 {
+        font-size: 24px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form,
+    .booking-summary {
+        padding: 15px;
+    }
+
+    .guidelines-container {
+        grid-template-columns: 1fr;
+    }
+
+    .guideline-card {
+        padding: 15px;
+    }
+}
+
+
+/* =====================================
+   TOAST NOTIFICATION - ACTIVITY 5
+===================================== */
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    background: #D71920;
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 8px;
+    border: 1px solid #D4AF37;
+
+    font-weight: bold;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition: all 0.3s ease;
+
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* TOAST - MOBILE RESPONSIVENESS */
+
+@media (max-width: 480px) {
+
+    .toast {
+        right: 15px;
+        left: 15px;
+        bottom: 15px;
+        text-align: center;
+    }
+}
+/* =====================================
+   ACTIVITY 8 - MATCH CARD LAYOUT
+===================================== */
+
+.match-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.match-controls label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#team {
+    width: auto;
+    min-width: 150px;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* MATCH CARDS - CSS GRID */
+
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.match-card {
+    background-color: #222222;
+    border: 1px solid #D71920;
+    border-top: 4px solid #D4AF37;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 0;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(215, 25, 32, 0.3);
+}
+
+.match-card h3 {
+    color: #D4AF37;
+    margin-top: 0;
+}
+
+.match-card h2 {
+    color: #FFFFFF;
+}
+
+.match-card p {
+    color: #eeeeee;
+    line-height: 1.6;
+}
+
+.match-card button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* HIDE FILTERED MATCHES */
+
+.match-card.hidden {
+    display: none;
+}
+
+/* LIST VIEW */
+
+.match-grid.list-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-grid.list-view .match-card {
+    width: 100%;
+}
+
+/* =====================================
+   HAMBURGER MENU
+===================================== */
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: #D71920;
+    color: white;
+    border: 1px solid #D4AF37;
+    border-radius: 6px;
+}
+
+/* =====================================
+   TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        width: 100%;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 0;
+    }
+
+    header nav li {
+        margin: 5px 0;
+    }
+
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .view-buttons {
+        justify-content: center;
+    }
+
+}
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 12px 15px;
+    }
+
+    .logo-container {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .rcb-logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-container h1 {
+        font-size: 20px;
+    }
+
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .match-card {
+        padding: 18px;
+    }
+
+    .view-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .view-buttons button {
+        width: 100%;
+    }
+
+}
+/* ===== UPDATED RCB HOME BANNER ===== */
+
+#home {
+width: 90%;
+max-width: 1250px;
+min-height: 270px;
+margin: 30px auto;
+padding: 40px 25px;
+text-align: center;
+border: 1px solid #D4AF37;
+border-radius: 15px;
+background:
+radial-gradient(ellipse at center, rgba(215,25,32,.35), transparent 70%),
+linear-gradient(120deg, #270307, #A50916, #210307);
+}
+
+.home-label {
+color: #D4AF37;
+letter-spacing: 4px;
+font-weight: bold;
+font-size: 12px;
+}
+
+#home h2 {
+color: white;
+font-size: clamp(30px, 4vw, 45px);
+margin: 15px 0;
+}
+
+#home h2 span {
+color: #D4AF37;
+}
+
+#home p {
+color: #eee;
+margin-bottom: 25px;
+}
+
+.home-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.home-buttons a {
+padding: 12px 22px;
+border-radius: 7px;
+text-decoration: none;
+font-weight: bold;
+border: 1px solid #D4AF37;
+transition: .3s;
+}
+
+.home-primary {
+background: #D71920;
+color: white;
+}
+
+.home-secondary {
+background: transparent;
+color: #D4AF37;
+}
+
+.home-buttons a:hover {
+background: #D4AF37;
+color: #111;
+}
+
+@media(max-width:480px) {
+#home {
+padding: 30px 15px;
+min-height: auto;
+}
+
+#home h2 {
+    font-size: 28px;
+}
+.home-buttons {
+    flex-direction: column;
+}
+
+}
+/* ===== TEAM CARD HOVER FIX ===== */
+
+.ipl-team {
+    background: #222 !important;
+    border: 1px solid #444 !important;
+    transform: none;
+    transition: background 0.3s ease, border-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.ipl-team h3 {
+    color: #D71920;
+}
+
+/* Red highlight ONLY when hovering */
+
+.ipl-team:hover {
+    background: linear-gradient(145deg, #35080c, #1c1011) !important;
+    border: 1px solid #D4AF37 !important;
+    transform: translateY(-5px);
+}
+/* ===== GRID AND LIST VIEW ===== */
+
+/* DEFAULT GRID VIEW */
+
+.match-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.match-card {
+    min-width: 0;
+    padding: 22px;
+    background: #202020;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+}
+
+/* LIST VIEW */
+
+.match-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.match-grid.list-view .match-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 8px 20px;
+    border-left: 5px solid #D71920;
+}
+
+/* MOBILE GRID VIEW */
+
+@media (max-width: 600px) {
+
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* MOBILE LIST VIEW */
+
+    .match-grid.list-view .match-card {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+}
+/* =====================================
+   ACTIVITY 8 - GRID AND LIST VIEW FIX
+===================================== */
+
+/* DEFAULT GRID VIEW */
+#match-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* GRID VIEW CARDS */
+#match-grid .match-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* LIST VIEW */
+#match-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+#match-grid.list-view .match-card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 12px 25px;
+    border-left: 5px solid #D71920;
+}
+
+#match-grid.list-view .match-card .book-btn {
+    grid-column: 2;
+}
+
+/* ACTIVE BUTTON */
+#grid-view.active,
+#list-view.active {
+    background: #D4AF37;
+    color: #101010;
+    border: 2px solid #D4AF37;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+
+    /* GRID VIEW: TWO COMPACT COLUMNS */
+    #match-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    #match-grid .match-card {
+        padding: 12px;
+        gap: 9px;
+    }
+
+    #match-grid .match-card h3 {
+        font-size: 16px;
+    }
+
+    #match-grid .match-card p {
+        font-size: 12px;
+    }
+
+    #match-grid .match-card .book-btn {
+        width: 100%;
+        font-size: 12px;
+        padding: 9px 4px;
+    }
+
+    /* LIST VIEW: FULL-WIDTH HORIZONTAL CARDS */
+    #match-grid.list-view {
+        grid-template-columns: 1fr;
+    }
+
+    #match-grid.list-view .match-card {
+        grid-template-columns: 1.3fr 1fr;
+        padding: 16px;
+        gap: 10px;
+    }
+
+    #match-grid.list-view .match-card .book-btn {
+        grid-column: 2;
+    }
+
+}
